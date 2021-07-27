@@ -7,6 +7,7 @@ import {TodoContext} from "./context/TodoContext";
 import todoreducer from "./context/reducer"
 import {useReducer} from "react";
 import TodoForm from "./Components/ToDoForm";
+import ToDo from "./Components/ToDo";
 
 const App =()=>{
   const [todos,dispatch]=useReducer( todoreducer,[] )
@@ -14,6 +15,7 @@ const App =()=>{
     <TodoContext.Provider value={{todos,dispatch}}>
       <Container fluid>
       <h1>To do App with Context API</h1>
+      <ToDo/>
       <TodoForm/>
       </Container>
       
